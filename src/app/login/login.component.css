@@ -5,11 +5,11 @@
     font-weight: normal;
   }
 :root {
-    --veryLightYellow: #fdff79;
-    --cream: #e9e9c9;
-    --White: #000000;
-    --Black: #000000;
-    --backGround: #bbb9b1;   
+    --colorBotones: #4bb4ca;
+    --fondoInputs: #a6988a;
+    --fuenteBoton: #040404;
+    --fuentePaginas: #000000;
+    --backGround: #88a19f;   
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -42,14 +42,14 @@ body {
     margin-bottom: 5px;
     justify-self: center;
     border-radius: 90px 90px;
-    border: solid var(--veryLightYellow);
+    border: solid var(--colorBotones);
 }
 .form {
     display: flex;
     flex-direction: column;
 }
 .form a {
-    color: var(--Black);
+    color: var(--fuentePaginas);
     border-radius: 8px;
     border: none;
     font-size: var(--sm);
@@ -64,7 +64,7 @@ body {
 
 }
 .input {
-    background-color: var(--cream);
+    background-color: var(--fondoInputs);
     border: none;
     border-radius: 8px;
     height: 30px;
@@ -76,56 +76,19 @@ body {
     margin-bottom: 22px;
 }
 .primary-button {
-    background-color: var(--veryLightYellow);
-    border-radius: 8px;
-    border: none;
-    color: var(--White);
+    background-color: var(--colorBotones);
+    border-radius: 10px;
+    border-color: var(--fuentePaginas);
+    color: var(--fuenteBoton);
     width: 100%;
     cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
 }
-.login-button {
+.login-button .register-button{
     margin-bottom: 30px;
     margin-top: 14px;
 }
 
-.workers {
-    border: solid var(--cream);
-    display: grid;
-    grid-template-columns: 1.5fr 3.5fr;
-    place-items: left;
-    height: 100vh;
-}
-.one {
-    margin: 0;
-    background-color: var(--cream);
-}
-.two {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 10px;
-}
-.foto {
-    position: relative;
-    width: 100%;
-    border-radius: 150px;
-    border: solid var(--veryLightYellow);
-}
-.formulario {
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.input-info{
-    margin: 1px;
-    border: solid;
-    
-}
-.informes {
-    height: 50px;
-    width: 100%
-}
 
