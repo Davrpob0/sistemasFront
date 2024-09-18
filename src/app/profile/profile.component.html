@@ -1,1 +1,51 @@
-<p>profile works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Usuario</title>
+    <link rel="stylesheet" href="./profile.component.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/carpeta.png" alt="icono de perfil" class="icon">
+                <h2>Mi Carpeta</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active">Perfil</a></li>
+                <li><a href="#">Documentos Pendientes</a></li>
+                <li><a href="#">Solicitud de Transferencia</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <section class="content">
+            <header class="content-header">
+                <h1>Perfil del Usuario</h1>
+                <button class="back-button">Regresar</button> <!-- Botón de regresar -->
+            </header>
+
+            <section class="profile-details">
+                <div class="profile-header">
+                    <img src="../../assets/carpeta.png" alt="avatar" class="profile-avatar">
+                    <div class="user-info">
+                        <h2>Nombre del Usuario</h2>
+                        <p>ID del Usuario: <span id="user-id">1234567890</span></p>
+                        <p>Email: <span id="user-email">usuario&#64;example.com</span></p>
+                    </div>
+                    <button class="edit-button">Editar Perfil</button>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="change-password-button">Cambiar Contraseña</button>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>

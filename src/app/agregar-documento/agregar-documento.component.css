@@ -77,75 +77,58 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    justify-content: space-between; /* Este ajuste ayuda a distribuir correctamente los elementos */
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .content-header {
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre el título y el botón de regresar */
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.content-header h1 {
-    font-size: var(--lg);
-    font-weight: bold;
-    color: var(--colorTexto);
-}
-
-.back-button {
+.profile-button {
     background-color: var(--colorBotones);
-    border: none;
-    border-radius: 8px;
     color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
-    cursor: pointer;
 }
 
-.back-button:hover {
+.profile-button:hover {
     background-color: #3a8ca5;
 }
 
-/* Estilos del perfil */
-.profile-details {
-    background-color: white;
-    padding: 20px;
+/* Área de arrastrar y soltar */
+.drag-and-drop {
+    flex-grow: 1; /* Crece para ocupar el espacio disponible sin sobrepasar el botón */
+    border: 2px dashed #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espacio entre el cuadro de arrastre y el botón */
 }
 
-.profile-header {
+.drag-and-drop .drag-area {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    height: 100%; /* Ocupar toda la altura disponible */
 }
 
-.profile-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
+.dragging {
+    background-color: #f0f0f0;
+    border-color: #4bb4ca;
 }
 
-.user-info {
-    flex-grow: 1;
-}
-
-.user-info h2 {
-    font-size: var(--lg);
-    color: var(--colorTexto);
-    margin-bottom: 10px;
-}
-
-.user-info p {
-    font-size: var(--md);
-    margin: 5px 0;
-    color: var(--colorTexto);
-}
-
-.edit-button {
+.browse-button {
     background-color: var(--colorBotones);
     border: none;
     border-radius: 8px;
@@ -154,18 +137,19 @@ body {
     font-size: var(--md);
     font-weight: bold;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-.edit-button:hover {
+.browse-button:hover {
     background-color: #3a8ca5;
 }
 
-.profile-actions {
-    margin-top: 20px;
-    text-align: right;
+/* Botón de Aceptar */
+.accept-button-container {
+    text-align: right; /* Asegura que el botón esté alineado a la derecha */
 }
 
-.change-password-button {
+.accept-button {
     background-color: var(--colorBotones);
     border: none;
     border-radius: 8px;
@@ -176,6 +160,6 @@ body {
     cursor: pointer;
 }
 
-.change-password-button:hover {
+.accept-button:hover {
     background-color: #3a8ca5;
 }

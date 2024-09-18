@@ -64,14 +64,17 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.menu li a.active {
-    background-color: #3a8ca5;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
 .menu li a:hover {
     background-color: #3a8ca5;
 }
+
+.menu li a.active {
+    background-color: #3a8ca5; /* Un color más oscuro para el botón activo */
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombras internas para darle el efecto de "presionado" */
+}
+
 
 .content {
     padding: 20px;
@@ -82,70 +85,73 @@ body {
 
 .content-header {
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre el título y el botón de regresar */
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.content-header h1 {
-    font-size: var(--lg);
-    font-weight: bold;
-    color: var(--colorTexto);
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
-.back-button {
+.profile-button {
     background-color: var(--colorBotones);
-    border: none;
-    border-radius: 8px;
     color: white;
     padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: var(--md);
     font-weight: bold;
-    cursor: pointer;
 }
 
-.back-button:hover {
+.profile-button:hover {
     background-color: #3a8ca5;
 }
 
-/* Estilos del perfil */
-.profile-details {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.document-list table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.profile-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.document-list th, .document-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.profile-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
+.document-list th {
+    background-color: var(--inputBg);
 }
 
-.user-info {
-    flex-grow: 1;
+.select-checkbox {
+    cursor: pointer;
 }
 
-.user-info h2 {
-    font-size: var(--lg);
-    color: var(--colorTexto);
-    margin-bottom: 10px;
+.share-button {
+    background-color: var(--colorBotones);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
 }
 
-.user-info p {
-    font-size: var(--md);
-    margin: 5px 0;
-    color: var(--colorTexto);
+.share-button:hover {
+    background-color: #3a8ca5;
 }
 
-.edit-button {
+/* Botón de Aceptar */
+.accept-button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.accept-button {
     background-color: var(--colorBotones);
     border: none;
     border-radius: 8px;
@@ -156,26 +162,6 @@ body {
     cursor: pointer;
 }
 
-.edit-button:hover {
-    background-color: #3a8ca5;
-}
-
-.profile-actions {
-    margin-top: 20px;
-    text-align: right;
-}
-
-.change-password-button {
-    background-color: var(--colorBotones);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 12px 20px;
-    font-size: var(--md);
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.change-password-button:hover {
+.accept-button:hover {
     background-color: #3a8ca5;
 }

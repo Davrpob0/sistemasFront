@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CertificarComponent } from './certificar/certificar.component';
+import { AgregarDocumentoComponent } from './agregar-documento/agregar-documento.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     RegisterComponent,
     MainPageComponent,
-    ProfileComponent
+    ProfileComponent,
+    CertificarComponent,
+    AgregarDocumentoComponent
   ],
   imports: [
     BrowserModule,

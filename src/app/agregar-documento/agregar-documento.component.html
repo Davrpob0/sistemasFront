@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Documento</title>
+    <link rel="stylesheet" href="./agregar-documento.component.css">
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/carpeta.png" alt="home" class="icon">
+                <h2>Mi Carpeta</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Mis Documentos</a></li>
+                <li><a href="#">Certificar Documentos</a></li>
+                <li><a href="#" class="active">Nuevo Documento</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <header class="content-header">
+                <h1>Agregar Nuevo Documento</h1>
+                <button class="profile-button" id="profile-button">Perfil</button>
+            </header>
+
+            <!-- Área de arrastrar y soltar archivos -->
+            <section class="drag-and-drop">
+                <div class="drag-area" id="drag-area">
+                    <p>Arrastra tu documento aquí o</p>
+                    <button class="browse-button" id="browse-button">Buscar en tu PC</button>
+                    <input type="file" id="file-input" hidden>
+                </div>
+            </section>
+
+            <!-- Botón Aceptar en la parte inferior derecha -->
+            <div class="accept-button-container">
+                <button class="accept-button">Aceptar</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const dragArea = document.getElementById("drag-area");
+        const fileInput = document.getElementById("file-input");
+        const browseButton = document.getElementById("browse-button");
+
+        browseButton.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+            dragArea.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        ["dragenter", "dragover"].forEach(eventName => {
+            dragArea.addEventListener(eventName, () => {
+                dragArea.classList.add("dragging");
+            });
+        });
+
+        ["dragleave", "drop"].forEach(eventName => {
+            dragArea.addEventListener(eventName, () => {
+                dragArea.classList.remove("dragging");
+            });
+        });
+
+        dragArea.addEventListener("drop", (e) => {
+            const files = e.dataTransfer.files;
+            console.log("Documentos arrastrados:", files);
+        });
+    </script>
+</body>
+</html>
