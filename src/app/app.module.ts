@@ -9,6 +9,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CertificarComponent } from './certificar/certificar.component';
 import { AgregarDocumentoComponent } from './agregar-documento/agregar-documento.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { DocumentosPendientesComponent } from './documentos-pendientes/documentos-pendientes.component';
+import { TransferenciaComponent } from './transferencia/transferencia.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { AgregarDocumentoComponent } from './agregar-documento/agregar-documento
     MainPageComponent,
     ProfileComponent,
     CertificarComponent,
-    AgregarDocumentoComponent
+    AgregarDocumentoComponent,
+    ForgotPasswordComponent,
+    ChangePasswordComponent,
+    DocumentosPendientesComponent,
+    TransferenciaComponent
   ],
   imports: [
     BrowserModule,
