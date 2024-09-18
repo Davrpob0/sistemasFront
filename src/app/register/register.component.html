@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./register.component.css">
+</head>
+<body>  
+    <div class="login">
+        <div class="form-container">
+            <div class="razon">
+                <img src="../../assets/carpeta.png" alt="logo" class="logo"> 
+                <br> 
+                <div class="titulo">Mi Carpeta Ciudadana</div>
+            </div>
+            <form action="/register" class="form">
+
+                <label for="id" class="label">Documento de Identidad</label>
+                <input type="text" id="id" placeholder="1234567890" class="input input-id">
+
+                <label for="name" class="label">Nombre Completo</label>
+                <input type="text" id="name" placeholder="Nombre Apellido A" class="input input-name">
+
+                <label for="address" class="label">Dirección</label>
+                <input type="text" id="address" placeholder="calle X # Y-Z" class="input input-address">
+
+                <label for="email" class="label">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="micorreo@micarpeta.com" class="input input-email">
+
+                <label for="password" class="label">Contraseña</label>
+                <input type="password" id="password" placeholder="********" class="input input-password">
+
+                <label for="confirm-password" class="label">Confirmar Contraseña</label>
+                <input type="password" id="confirm-password" placeholder="********" class="input input-password">
+
+                <input type="submit" value="Registrar" class="primary-button register-button">
+
+                <a href="/">Ya tengo una cuenta</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
