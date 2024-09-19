@@ -118,6 +118,12 @@ body {
     background-color: var(--sidebarBg);
 }
 
+/* Nuevo estilo para el estado de los documentos */
+.document-list td:nth-child(4) {
+    font-weight: bold;
+    color: #333;
+}
+
 .share-button {
     background-color: var(--colorBotones);
     border: none;

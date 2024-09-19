@@ -1,1 +1,53 @@
-<p>transferencia works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Transferencia</title>
+    <link rel="stylesheet" href="./transferencia.component.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/carpeta.png" alt="icono de carpeta" class="icon">
+                <h2>Mi Carpeta</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#" class="active">Solicitud de Transferencia</a></li> <!-- Botón activo -->
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <section class="content">
+            <header class="content-header">
+                <h1>Solicitud de Transferencia</h1>
+                <button class="back-button">Regresar</button>
+            </header>
+
+            <!-- Formulario de transferencia -->
+            <section class="transfer-section">
+                <h2>Seleccionar Operador</h2>
+                <div class="form-group">
+                    <label for="operator-select">Operadores Disponibles:</label>
+                    <select id="operator-select" class="operator-select">
+                        <option value="">Seleccionar Operador</option>
+                        <option value="operador1">Operador 1</option>
+                        <option value="operador2">Operador 2</option>
+                        <option value="operador3">Operador 3</option>
+                        <!-- Añadir más operadores según sea necesario -->
+                    </select>
+                </div>
+            </section>
+
+            <!-- Botón de Aceptar -->
+            <div class="accept-button-container">
+                <button class="accept-button">Aceptar</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

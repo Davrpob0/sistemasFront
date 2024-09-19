@@ -11,7 +11,6 @@ import { CertificarComponent } from './certificar/certificar.component';
 import { AgregarDocumentoComponent } from './agregar-documento/agregar-documento.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { DocumentosPendientesComponent } from './documentos-pendientes/documentos-pendientes.component';
 import { TransferenciaComponent } from './transferencia/transferencia.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { TransferenciaComponent } from './transferencia/transferencia.component'
     AgregarDocumentoComponent,
     ForgotPasswordComponent,
     ChangePasswordComponent,
-    DocumentosPendientesComponent,
     TransferenciaComponent
   ],
   imports: [
